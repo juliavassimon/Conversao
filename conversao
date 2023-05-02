@@ -1,0 +1,23 @@
+/*•	Desafio Conversão: Usar o scanner para ter três String salários de um funcionário e calcular a média dos últimos três salários de uma pessoa. A pessoa tem opção de colocar o salario tanto com ponto quanto com virgula. Somar os três salario e dividir por 3.*/
+
+import java.util.Scanner
+
+public class desafioConvensao {
+	public static void main (String [] args) {
+		Scanner scan = new Scanner (System.in);
+		System.out.println("Digite o salario do primeiro funcionario: ");
+		String valor1 = scan.nextLine().replace(",", "."); //replace usado para aceitar a virgula como ponto flutuante
+		System.out.println("Digite o salario do segundo funcionario: ");
+		String valor2 = scan.nextLine().replace(",", ".");
+		System.out.println("Digite o salario do terceiro funcionario: ");
+		String valor3 = scan.nextLine().replace(",", ".");
+		double num1 = Double.parseDouble(valor1);
+		double num2 = Double.parseDouble(valor2);
+		double num3 = Double.parseDouble(valor3);
+		double soma = num1 + num2 + num3;
+		System.out.println("A média dos salarios e: "+soma/3);
+		
+		scan.close();
+	}
+
+}
